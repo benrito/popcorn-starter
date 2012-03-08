@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn --!>
+
+<script src="js/popcorn-complete.js"></script>
+
+<!-- The Style --!>
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn --!>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var pop = Popcorn("#video");
+    
+	pop.footnote({
+		start:'1', // Our start time in seconds
+		end:'6', // Our end time in seconds
+		text:"Hello world!", // The text we want to display
+		target:'box', // What DOM element we want to target on the page
+	    });
+});
+</script>
+</head>
+
+<!-- The Body --!>
+
+<body>	
+
+<!-- The Container --!>
+
+	<div class="container">
+	
+	
+<!--The Video--!>		
+
+		<video id="video" controls>
+  			<source src="video/test.webm">
+  			<source src="video/test.mp4">
+		</video>
+
+<!--The Content Box--!>		
+		<div id="box">
+		
+		</div>
+
+	</div>	
+
+</body>
+</html>
