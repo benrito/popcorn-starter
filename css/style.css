@@ -18,8 +18,13 @@ margin: 0px auto;
 width: 920px;
 height: 270px;
 background-color: grey;
+background-image: url('imgres.jpeg');
 }
 #video {
+}
+#video:hover {
+opacity: 0.5;
+-webkit-transition: 2s ease-in;
 }
 #box {
 background-color: black;
