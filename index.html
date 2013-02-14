@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
 
-<!-- Link to Popcorn --!>
+<!-- Link to Popcorn -->
 
 <script src="js/popcorn-complete.js"></script>
 
-<!-- The Style --!>
+<!-- The Style -->
 
 <link rel="stylesheet" href="css/style.css" />
 
-<!-- Pop the Corn --!>
+<!-- Pop the Corn -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,33 +20,75 @@ document.addEventListener("DOMContentLoaded", function () {
 		end:'6', // Our end time in seconds
 		text:"Hello world!", // The text we want to display
 		target:'box', // What DOM element we want to target on the page
-	    });
+	});
+
+	pop.image({
+		start:'6.1', // Our start time in seconds
+		end:'9', // Our end time in seconds
+		src: "img/cat.jpg",
+		target:'box', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		/* applyclass: "flip, black, move_down", // Specify which CSS class */
+	});
+
+	pop.image({
+		start:'9.1', // Our start time in seconds
+		end:'12', // Our end time in seconds
+		src: "img/cat.jpg",
+		target:'container', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		/* applyclass: "flip, black, move_down", // Specify which CSS class */
+	});
+
+	pop.googlemap({
+		start: 13,
+		end: 19,
+		type: "ROADMAP",
+		target: "box",
+		lat: 43.665429,
+		lng: -79.403323,
+		zoom: 5,
+	});
+
+	pop.webpage({
+		id: "webpages-a",
+		start: 19.1,
+		end: 25,
+		src: "http://itp.nyu.edu/itp/",
+		target: "container"
+	});
+
 });
 </script>
 </head>
 
-<!-- The Body --!>
+<!-- The Body -->
 
 <body>	
 
-<!-- The Container --!>
+<!-- The Container -->
 
-	<div class="container">
+	<div id="container">
 	
 	
-<!--The Video--!>		
+<!--The Video-->		
 
 		<video id="video" controls>
   			<source src="video/test.webm">
   			<source src="video/test.mp4">
 		</video>
 
-<!--The Content Box--!>		
+<!--The Content Box-->
+
 		<div id="box">
 		
 		</div>
 
+<!-- End Container -->
+
 	</div>	
+
+<!-- End Body -->
 
 </body>
 </html>
